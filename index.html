@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","primary":"#004ac6","surface-tint":"#0053db","tertiary-container":"#007d57","primary-fixed":"#dbe1ff","tertiary":"#006243","on-primary":"#ffffff","on-error":"#ffffff","on-primary-fixed":"#00174b","surface":"#f8f9ff","on-secondary-fixed-variant":"#3f465c","outline":"#737686","tertiary-fixed":"#85f8c4","secondary":"#565e74","outline-variant":"#c3c6d7","on-surface-variant":"#434655","inverse-primary":"#b4c5ff","on-tertiary-fixed":"#002114","surface-bright":"#f8f9ff","error-container":"#ffdad6","on-surface":"#0b1c30","surface-container-high":"#dce9ff","tertiary-fixed-dim":"#68dba9","on-secondary-fixed":"#131b2e","on-tertiary-container":"#bdffdc","secondary-container":"#dae2fd","on-background":"#0b1c30","secondary-fixed-dim":"#bec6e0","error":"#ba1a1a","surface-variant":"#d3e4fe","surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","primary-fixed-dim":"#b4c5ff","on-error-container":"#93000a","on-primary-container":"#eeefff","on-tertiary":"#ffffff","surface-dim":"#cbdbf5","surface-container-highest":"#d3e4fe","surface-container":"#e5eeff","on-primary-fixed-variant":"#003ea8","on-secondary":"#ffffff","inverse-on-surface":"#eaf1ff","on-tertiary-fixed-variant":"#005137","primary-container":"#2563eb","inverse-surface":"#213145","background":"#f8f9ff","on-secondary-container":"#5c647a"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"2.5rem","margin":"2rem","gutter-sm":"1rem","margin-sm":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter":"1.5rem","space-md":"1rem"},fontFamily:{"headline-xl":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-md":["JetBrains Mono"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["JetBrains Mono"],"body-sm":["Inter"]},fontSize:{"headline-xl":["36px",{lineHeight:"44px",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",fontWeight:"500"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="CodeWave Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XP9RuaTWuhgj5jZwbdVkN2_8XTDC6BJUd3JoOjlWe30PmkkkvD9pcPQRVoJfTO0pKJawFw_2Ke3LHBxL0yCvzqL2lzBbKihmPwYB6emawnLrR3INsunfMVwyWIWrGOvFl6fRDIGTZ7t15hKNI0hzow_WSikVW9UIAf450ZtbMIy4UuMRcyW3mJhPlm0bqgIQYx2efxnafXmp-SZXPZ6ZenYSMhg_6xJvyPfIPAuotn"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">CodeWave</span><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase">Enterprise Cloud</span></div></div><div class="flex items-center gap-space-md flex-1 max-w-xl mx-space-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant">search</span><input class="w-full h-9 pl-9 pr-space-md bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container/20" placeholder="서비스, 클라우드 파이프라인, 마이그레이션 티켓 검색..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-secondary-container"><span class="material-symbols-outlined text-primary text-headline-sm">flag</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-secondary-container leading-none">클라우드 전면 전환 D-Day</span><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">2027. 06 목표 (D-1214)</span></div></div><button aria-label="알림" class="relative p-space-xs rounded-xl hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-on-surface-variant">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAal2YPsRP2shV4BndJafa5IFzXsXeNFQZW3pLZNTEx3HI8HZUQnLIvBytfEX-dxxMeUAPS7jk5V7K9IOVLebr4jw0BtG6m3UQs0qI4OXQbPyqr8h7l64aI5rel19n5Rxebd5zXaqvPzUcoBQgxvJ50EhdSWr7_e3tlMeyMolaf34DVhCBNd1z-K3HHqWACndgxptp6eGArUM2xehysScGNwXslNgZVbAuWL7rUggg"/><div class="hidden lg:flex flex-col text-left"><span class="font-body-sm text-body-sm text-on-surface font-semibold leading-tight">정민우 수석</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">클라우드 인프라 아키텍트</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-sm px-space-sm"><div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">운영 관리 시스템</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="flex items-center px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="metrics-and-kpis" href="#">전사 지표 대시보드</a><a class="flex items-center px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="roadmap" href="#">전환 로드맵</a><a aria-current="page" class="flex items-center px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-sm" data-path="pipelines" href="#">CI/CD 배포 파이프라인</a><a class="flex items-center px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="incidents" href="#">장애 모니터링·알림</a><a class="flex items-center px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="client-portal" href="#">고객 포털 연계</a></nav></div><div class="px-space-sm"><div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">설정 및 환경</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="flex items-center px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="system-settings" href="#">시스템 설정</a></nav></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-16 px-gutter py-space-lg bg-surface"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP HEADER & CONTROLS -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          ACTIVE PIPELINE ONLINE
+        </span>
+<span class="text-secondary font-label-sm text-label-sm">클러스터 ID: k8s-prod-ap-northeast-2a</span>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="text-secondary font-label-sm text-label-sm">배포 오케스트레이터: ArgoCD + GitHub Actions</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        CI/CD 자동 배포 파이프라인 (GitOps &amp; 릴리스 관제)
+      </h1>
+<!-- Deployment Policies Badges -->
+<div class="flex items-center gap-space-xs flex-wrap pt-space-xs">
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">event_repeat</span>
+<span>정기 릴리스: 매주 화/목 14:00 (주 2회 전면 전환)</span>
+</div>
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">sync_alt</span>
+<span>전략: Blue/Green 무중단 롤아웃</span>
+</div>
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">shield</span>
+<span>자동 롤백 임계치: 5xx 에러 1% 초과 시 즉시 원복</span>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-space-sm shrink-0 self-start lg:self-center">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>배포 로그 내보내기</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">terminal</span>
+<span>파이프라인 YAML</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-primary-container text-on-primary hover:bg-primary font-body-sm text-body-sm font-semibold transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-lg">bolt</span>
+<span>수동 핫픽스 트리거</span>
+</button>
+</div>
+</section>
+<!-- 4 CORE KPI CARDS -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">금주 정기 배포 현황</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-lg">task_alt</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">2 / 2</span>
+<span class="font-body-md text-body-md text-secondary">회 완료</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low/60 px-space-xs py-1 rounded">
+<span class="text-tertiary-container font-semibold">목표 100% 달성 (지연 0건)</span>
+<span class="text-secondary">다음: 차주 화 14:00</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">파이프라인 평균 소요</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-lg">timer</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">3분 42초</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">▼ 18초 단축</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span>빌드 1m10s</span>
+<span class="text-outline-variant">·</span>
+<span>테스트 1m40s</span>
+<span class="text-outline-variant">·</span>
+<span>배포 52s</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">테스트 커버리지 &amp; 통과율</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-tertiary">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">84.2%</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">1,428 PASS</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>단위·통합·E2E 자동화</span>
+<span class="text-on-surface font-semibold">FAIL 0건</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">릴리스 성공률 &amp; 무중단율</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-primary-container">
+<span class="material-symbols-outlined text-lg">verified</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">99.4%</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Downtime 0초</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low/60 px-space-xs py-1 rounded">
+<span class="text-tertiary-container font-semibold">과거 월 1회 대비 장애율 94% 감소</span>
+</div>
+</div>
+</section>
+<!-- ACTIVE PIPELINE VISUAL RUNNER -->
+<section class="flex flex-col bg-surface-container-lowest p-space-lg rounded-xl shadow-sm gap-space-md">
+<!-- Runner Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-sm gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+            RUNNING #849
+          </span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">release-v2.14.0 (고객 포털 연계 API 고도화)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">main branch</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-semibold">commit #a8f3b92</span>
+<span>by 이하은 선임 (클라우드 플랫폼 SRE팀)</span>
+<span class="text-outline-variant">·</span>
+<span>트리거: Pull Request #412 머지 완료 승인</span>
+<span class="text-outline-variant">·</span>
+<span>진행 시간: 3분 02초 경과</span>
+</p>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-center">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-primary font-body-sm text-body-sm font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>Live Console Stream</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-xl bg-error-container hover:bg-error/20 text-on-error-container font-body-sm text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">stop_circle</span>
+<span>중단 (Cancel)</span>
+</button>
+</div>
+</div>
+<!-- 5-STAGE PIPELINE FLOW CHART -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative">
+<!-- Stage 1 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">STEP 01</span>
+<span class="inline-flex items-center gap-1 text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span> 12s
+          </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Source Trigger</span>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">GitHub main 머지 감지</span>
+<div class="mt-space-md pt-space-xs flex flex-col gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Webhook 수신</span>
+<span class="text-tertiary-container font-semibold">SUCCESS</span>
+</div>
+<div class="flex items-center justify-between">
+<span>브랜치 검증</span>
+<span class="text-tertiary-container font-semibold">PROTECTED</span>
+</div>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">STEP 02</span>
+<span class="inline-flex items-center gap-1 text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span> 58s
+          </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Build &amp; Push</span>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">Docker / ECR 빌드 푸시</span>
+<div class="mt-space-md pt-space-xs flex flex-col gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>멀티아키텍처 빌드</span>
+<span class="text-on-surface font-semibold">linux/amd64</span>
+</div>
+<div class="flex items-center justify-between">
+<span>이미지 태그</span>
+<span class="text-primary font-semibold">sha-a8f3b92</span>
+</div>
+</div>
+</div>
+<!-- Stage 3 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">STEP 03</span>
+<span class="inline-flex items-center gap-1 text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span> 82s
+          </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Automated Test</span>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">단위·통합·Trivy 스캔</span>
+<div class="mt-space-md pt-space-xs flex flex-col gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>단위/통합 테스트</span>
+<span class="text-tertiary-container font-semibold">1,428 PASS</span>
+</div>
+<div class="flex items-center justify-between">
+<span>보안 취약점 (CVE)</span>
+<span class="text-tertiary-container font-semibold">CRITICAL 0</span>
+</div>
+</div>
+</div>
+<!-- Stage 4 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">STEP 04</span>
+<span class="inline-flex items-center gap-1 text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span> 45s
+          </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Staging &amp; Canary</span>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">카나리 트래픽 10% 검증</span>
+<div class="mt-space-md pt-space-xs flex flex-col gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>헬스체크 프로브</span>
+<span class="text-tertiary-container font-semibold">HTTP 200 OK</span>
+</div>
+<div class="flex items-center justify-between">
+<span>카나리 에러율</span>
+<span class="text-tertiary-container font-semibold">0.00%</span>
+</div>
+</div>
+</div>
+<!-- Stage 5 (Active/Highlight) -->
+<div class="flex flex-col p-space-md rounded-xl bg-primary-container text-on-primary shadow-md transition-all">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-primary-container font-semibold">STEP 05 (NOW)</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-ping"></span> 25s Running
+          </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-primary font-bold mt-1">Prod Blue/Green</span>
+<span class="font-body-sm text-body-sm text-on-primary-container mt-0.5">운영 환경 100% 트래픽 전환</span>
+<div class="mt-space-md pt-space-xs flex flex-col gap-1 font-label-sm text-label-sm text-on-primary-container">
+<div class="flex items-center justify-between">
+<span>Green 활성화</span>
+<span class="font-bold text-on-primary">100% SWITCHED</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Blue Pod 상태</span>
+<span class="text-on-primary">STANDBY (IDLE)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Stage Progress Bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full transition-all duration-500" style="width: 92%"></div>
+</div>
+</section>
+<!-- ENVIRONMENT MATRIX & RELEASE HISTORY & SAFETY GUARDRAIL BENTO -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT 8 COLS: ENV MATRIX & RECENT RELEASES -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- ENVIRONMENT MATRIX -->
+<div class="flex flex-col bg-surface-container-lowest p-space-lg rounded-xl shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">hub</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">클러스터 환경별 런타임 현황 (Environment Matrix)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">실시간 Pod 오토스케일링 연동</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Prod Matrix Card -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">PROD (GREEN ACTIVE)</span>
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">v2.14.0 (Live)</span>
+<p class="font-body-sm text-body-sm text-secondary">고객 포털 및 통합 API 정상 서빙 중</p>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex justify-between text-secondary">
+<span>가동 Pod 수</span>
+<span class="text-on-surface font-semibold">8 Replicas (HPA)</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>평균 CPU / Mem</span>
+<span class="text-on-surface font-semibold">24% / 38% (안정)</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>Ingress Gateway</span>
+<span class="text-tertiary-container font-semibold">100% Green Routed</span>
+</div>
+</div>
+</div>
+<!-- Staging Matrix Card -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">STAGING</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">v2.15.0-rc1</span>
+<p class="font-body-sm text-body-sm text-secondary">차기 목요 정기 릴리스 후보 검증</p>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex justify-between text-secondary">
+<span>가동 Pod 수</span>
+<span class="text-on-surface font-semibold">4 Replicas</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>E2E 회귀 테스트</span>
+<span class="text-tertiary-container font-semibold">98.4% 완료 (통과)</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>성능 부하 테스트</span>
+<span class="text-on-surface font-semibold">P95 180ms</span>
+</div>
+</div>
+</div>
+<!-- Dev Matrix Card -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">DEV / REVIEW</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">feature/sso-sync</span>
+<p class="font-body-sm text-body-sm text-secondary">사내 SSO 워크스페이스 통합 개발</p>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex justify-between text-secondary">
+<span>가동 Pod 수</span>
+<span class="text-on-surface font-semibold">2 Replicas</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>코드 정적 분석</span>
+<span class="text-tertiary-container font-semibold">SonarQube A등급</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>빌드 상태</span>
+<span class="text-secondary font-semibold">대기열 (Queued)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RECENT DEPLOYMENTS HISTORY TABLE -->
+<div class="flex flex-col bg-surface-container-lowest p-space-lg rounded-xl shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">history</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">최근 배포 및 릴리스 히스토리 (Audit Log)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">최근 7일간의 운영 배포 기록</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase">
+<th class="py-2.5 px-space-md rounded-l-lg">버전 / 태그</th>
+<th class="py-2.5 px-space-sm">배포 대상 서비스</th>
+<th class="py-2.5 px-space-sm">배포 유형</th>
+<th class="py-2.5 px-space-sm">소요 시간</th>
+<th class="py-2.5 px-space-sm">담당 / 승인자</th>
+<th class="py-2.5 px-space-sm">상태</th>
+<th class="py-2.5 px-space-md text-right rounded-r-lg">세부 로그</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-label-md text-label-md font-bold text-primary">
+                  v2.14.0
+                </td>
+<td class="py-3 px-space-sm text-on-surface font-medium">고객 포털 연계 API</td>
+<td class="py-3 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">정기 목요 배포</span>
+</td>
+<td class="py-3 px-space-sm text-secondary font-label-sm text-label-sm">3m 02s</td>
+<td class="py-3 px-space-sm text-on-surface">이하은 / 정민우</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 배포 완료
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="text-primary hover:text-surface-tint font-label-sm text-label-sm font-semibold" type="button">Argo View</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-label-md text-label-md font-bold text-on-surface">
+                  v2.13.2
+                </td>
+<td class="py-3 px-space-sm text-on-surface font-medium">ERP 마이그레이션 어댑터</td>
+<td class="py-3 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">긴급 핫픽스</span>
+</td>
+<td class="py-3 px-space-sm text-secondary font-label-sm text-label-sm">2m 45s</td>
+<td class="py-3 px-space-sm text-on-surface">박지훈 / 정민우</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 성공 (Patch)
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="text-primary hover:text-surface-tint font-label-sm text-label-sm font-semibold" type="button">Argo View</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-label-md text-label-md font-bold text-on-surface">
+                  v2.13.1
+                </td>
+<td class="py-3 px-space-sm text-on-surface font-medium">인증 게이트웨이 Redis 캐시</td>
+<td class="py-3 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">정기 화요 배포</span>
+</td>
+<td class="py-3 px-space-sm text-secondary font-label-sm text-label-sm">4m 12s</td>
+<td class="py-3 px-space-sm text-on-surface">최유진 / 정민우</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> 자동 롤백
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="text-error hover:underline font-label-sm text-label-sm font-semibold" type="button">RC Postmortem</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-label-md text-label-md font-bold text-on-surface">
+                  v2.13.0
+                </td>
+<td class="py-3 px-space-sm text-on-surface font-medium">클라우드 데이터 브로커 Kafka</td>
+<td class="py-3 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">정기 목요 배포</span>
+</td>
+<td class="py-3 px-space-sm text-secondary font-label-sm text-label-sm">3m 38s</td>
+<td class="py-3 px-space-sm text-on-surface">김태성 / 정민우</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 배포 완료
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="text-primary hover:text-surface-tint font-label-sm text-label-sm font-semibold" type="button">Argo View</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- RIGHT 4 COLS: SAFETY GUARDRAIL & ROLLBACK CONTROL CENTER -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Blue-Green Traffic Control Card -->
+<div class="flex flex-col bg-surface-container-lowest p-space-lg rounded-xl shadow-sm gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">alt_route</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Blue/Green 트래픽 배분</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">LIVE STABLE</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+          Kubernetes Ingress 컨트롤러를 통한 실시간 트래픽 가중치 라우팅 현황입니다.
+        </p>
+<!-- Visual Bar Indicator -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm font-semibold">
+<span class="text-tertiary-container">GREEN (v2.14.0) : 100%</span>
+<span class="text-secondary">BLUE (v2.13.2) : 0% 대기</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex overflow-hidden">
+<div class="h-full bg-tertiary-container transition-all" style="width: 100%"></div>
+<div class="h-full bg-secondary-fixed transition-all" style="width: 0%"></div>
+</div>
+</div>
+<!-- Telemetry Metrics mini-chart -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">실시간 5xx 응답률</span>
+<span class="text-tertiary-container font-bold">0.02% (임계치 1.00%)</span>
+</div>
+<!-- Inline Sparkline SVG for 5xx error rate -->
+<svg class="w-full h-8 text-tertiary-container" fill="none" preserveaspectratio="none" viewbox="0 0 200 32">
+<path d="M0 28 L30 26 L60 27 L90 25 L120 28 L150 26 L180 27 L200 26" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 28 L30 26 L60 27 L90 25 L120 28 L150 26 L180 27 L200 26 L200 32 L0 32 Z" fill="currentColor" fill-opacity="0.1"></path>
+</svg>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-1">
+<span class="text-secondary">P95 레이턴시</span>
+<span class="text-on-surface font-semibold">142ms (정상 한도 800ms)</span>
+</div>
+</div>
+<!-- Automated Rollback Guardrails -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">자동 롤백 발동 가드레일</span>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary-container">check</span>
+              5xx 에러율 &gt; 1% 발생 시
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">Prometheus 감시</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary-container">check</span>
+              P95 응답 지연 &gt; 800ms (3분 지속)
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">Datadog APM</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary-container">check</span>
+              K8s Pod CrashLoopBackOff 2건 이상
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">Kubelet Event</span>
+</div>
+</div>
+<!-- 1-Click Rollback Action Area -->
+<div class="mt-space-sm p-space-md rounded-xl bg-error-container/40 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-error font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined">warning</span>
+<span>비상 원클릭 즉시 롤백</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            비정상 트래픽 또는 운영 결함 감지 시 대기 중인 이전 버전(<strong>v2.13.2</strong>)으로 즉시 100% 트래픽을 원복합니다.
+          </p>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-error text-on-error hover:bg-on-error-container font-headline-sm text-headline-sm font-bold transition-all shadow-md flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined">replay</span>
+<span>이전 안정 버전(v2.13.2) 1-Click Rollback</span>
+</button>
+</div>
+</div>
+<!-- DevSecOps Compliance Checklist Card -->
+<div class="flex flex-col bg-surface-container-lowest p-space-lg rounded-xl shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">DevSecOps 거버넌스 규격</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">100% 준수</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+          금융 및 엔터프라이즈 컴플라이언스 배포 통제 기준
+        </p>
+<div class="flex flex-col gap-1.5 pt-space-xs font-label-sm text-label-sm">
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low text-on-surface">
+<span>2인 이상 PR 코드 리뷰 승인 (Peer Review)</span>
+<span class="text-tertiary-container font-bold">PASS</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low text-on-surface">
+<span>시크릿/토큰 유출 방지 (GitGuardian)</span>
+<span class="text-tertiary-container font-bold">0 LEAK</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low text-on-surface">
+<span>컨테이너 서명 검증 (Cosign Keyless)</span>
+<span class="text-tertiary-container font-bold">SIGNED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
